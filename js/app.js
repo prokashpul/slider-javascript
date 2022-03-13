@@ -50,3 +50,7 @@ leftArrow.addEventListener('click',()=>{
         dotNavigation(sliderNum);
     }
 })
+// set auto slide
+setInterval(()=>{
+    sliderSlide();
+},3000)

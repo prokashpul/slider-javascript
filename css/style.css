@@ -19,19 +19,24 @@ body{
 .slider-container{
     position:relative;
     width: 100%;
-    height:500px;
+    height:100vh;
+    overflow: hidden;
 }
 .slider-container .slider-img{
     width:100%;
     position:absolute;
     visibility: hidden;
+    clip-path: circle(0% at 0 50%);
 }
 .slider-container .slider-img.active{
     visibility: visible;
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
 }
 .slider-img img{
     width:100%;
-    height:500px;
+    height:100%;
 }
 
 .left-arrow,.right-arrow{
@@ -43,6 +48,7 @@ body{
     /* transform: translateY(-50%); */
     position: absolute;
     color: rebeccapurple;
+    cursor: pointer;
 }
 .left-arrow{
     left:0;
@@ -64,6 +70,7 @@ body{
     border:2px solid rebeccapurple;
     border-radius: 50%;
     margin: 0 10px;
+    cursor: pointer;
 }
 .dots .dot.active{
     background-color: blueviolet;
