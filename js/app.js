@@ -1,5 +1,6 @@
 const slider = document.querySelectorAll('.slider-img')
 const dotNav= document.querySelectorAll('.dot')
+const rightArrow = document.querySelector('.right-arrow')
 
 let currentSidler = 1;
 
@@ -24,3 +25,17 @@ dotNav.forEach((dot,i)=>{
         currentSidler=i;
     });
 });
+// slide
+let sliderNum = 0;
+const sliderSlide = ()=>{
+    sliderNum++
+    if(slider.length<=sliderNum){
+        sliderNum = 0;
+        dotNavigation(sliderNum);
+    }else{
+        dotNavigation(sliderNum);
+    }
+}
+rightArrow.addEventListener('click',()=>{
+    sliderSlide()
+})

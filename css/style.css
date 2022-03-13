@@ -24,6 +24,10 @@ body{
 .slider-container .slider-img{
     width:100%;
     position:absolute;
+    visibility: hidden;
+}
+.slider-container .slider-img.active{
+    visibility: visible;
 }
 .slider-img img{
     width:100%;
